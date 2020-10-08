@@ -10,9 +10,9 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <p className={styles.title}>O Clima!</p>
-            <Link href="/clima">
-                <a className={styles.card} >Ver o clima atual</a>
+            <p className={styles.title}>DEV</p>
+            <Link href="/articles">
+                <a className={styles.card} >Ver os meus artigos</a>
             </Link>
         </div>
     )

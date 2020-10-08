@@ -1,10 +1,17 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
+  padding: 1rem 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.link{
+  text-decoration: underline #0070f3;
+}
+.link:hover{
+  color: #0070f3;
 }
 
 .main {
@@ -80,8 +87,16 @@
   margin-top: 3rem;
 }
 
+.profile{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
 .card {
   margin: 1rem;
+  min-width: 390px;
+  width: 400px;
   flex-basis: 45%;
   padding: 1.5rem;
   text-align: left;
@@ -90,6 +105,11 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
 }
 
 .card:hover,
