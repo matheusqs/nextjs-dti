@@ -2,18 +2,20 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
 export default function Articles({articles}){
-    console.log(articles)
+    // console.log(articles)
     return (
         <div className={styles.container}>
             <Link href="/">
                 <a className={styles.link}>Voltar</a>
             </Link>
                 {articles.map((article) => (
-                    <div key={article.id} className={styles.card}>
+                    <Link href={`articles/${article.slug}`} key={article.id}>
+                        <a className={styles.card}>
                         <img className={styles.profile} src={article.user.profile_image} alt={article.user.name}/>
                         <h1>{article.title}</h1>
                         <p>{article.description}</p>
-                    </div>
+                        </a>
+                    </Link>
                 ))}
         </div>
     )
@@ -26,11 +28,11 @@ export async function getStaticProps(){
         }
     })
     const articles = await response.json()
-    console.log(articles)
+    console.log('generating articles')
     return {
         props: {
             articles
         },
-        revalidate: 10
+        // revalidate: 10
     }
 }
